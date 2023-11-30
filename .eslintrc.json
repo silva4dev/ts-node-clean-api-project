@@ -2,7 +2,8 @@
   "extends": "standard-with-typescript",
   "rules": {
     "@typescript-eslint/strict-boolean-expressions": "off",
-    "@typescript-eslint/consistent-type-imports": "off"
+    "@typescript-eslint/consistent-type-imports": "off",
+    "@typescript-eslint/return-await": "off"
   },
   "parserOptions": {
     "project": "./tsconfig.json"
