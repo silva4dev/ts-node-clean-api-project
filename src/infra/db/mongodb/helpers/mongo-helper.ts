@@ -1,15 +1,20 @@
-import { MongoClient } from 'mongodb'
+import { Collection, MongoClient } from 'mongodb'
 
 export const MongoHelper = {
-  client: null,
+  client: null as MongoClient | null,
 
   async connect (uri: string): Promise<void> {
-    this.client = await MongoClient.connect(process.env.MONGO_URL as string)
+    this.client = await MongoClient.connect(process.env.MONGO_URL as string, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true
+    })
   },
 
   async disconnect (): Promise<void> {
-    if (this.client) {
-      await this.client.close()
-    }
+    await this.client.close()
+  },
+
+  getCollection (name: string): Collection {
+    return this.client.db().collection(name)
   }
 }
