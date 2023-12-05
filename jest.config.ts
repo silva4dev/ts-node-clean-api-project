@@ -5,7 +5,10 @@ const config: Config = {
   roots: ['<rootDir>/src'],
   coverageProvider: 'v8',
   collectCoverage: true,
-  collectCoverageFrom: ['src/**/*.ts'],
+  collectCoverageFrom: [
+    '<rootDir>/src/**/*.ts',
+    '!<rootDir>/src/main/**'
+  ],
   coverageDirectory: 'coverage',
   testEnvironment: 'node',
   transform: {
