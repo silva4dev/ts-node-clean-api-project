@@ -11,6 +11,7 @@ const config: Config = {
   ],
   coverageDirectory: 'coverage',
   testEnvironment: 'node',
+  watchPathIgnorePatterns: ['globalConfig'],
   transform: {
     '.+\\.ts$': 'ts-jest'
   }
