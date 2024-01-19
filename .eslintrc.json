@@ -1,5 +1,11 @@
 {
   "extends": "standard-with-typescript",
+  "ignorePatterns": [
+    "jest-integration-config.ts", 
+    "jest-unit-config.ts",
+    "jest-mongodb-config.ts",
+    "jest.config.ts"
+  ],
   "rules": {
     "@typescript-eslint/no-misused-promises": "off",
     "@typescript-eslint/strict-boolean-expressions": "off",
@@ -9,6 +15,6 @@
     "@typescript-eslint/unbound-method": "off"
   },
   "parserOptions": {
-    "project": "./tsconfig-eslint.json"
+    "project": "./tsconfig.eslint.json"
   }
 }
