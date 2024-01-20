@@ -12,7 +12,8 @@
     "@typescript-eslint/consistent-type-imports": "off",
     "@typescript-eslint/return-await": "off",
     "no-new": "off",
-    "@typescript-eslint/unbound-method": "off"
+    "@typescript-eslint/unbound-method": "off",
+    "@typescript-eslint/no-floating-promises": "off"
   },
   "parserOptions": {
     "project": "./tsconfig.eslint.json"
