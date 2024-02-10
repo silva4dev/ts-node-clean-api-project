@@ -34,14 +34,8 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Run Unit Tests
-        run: npm test -- -c jest-unit-config.ts
-
-      - name: Run E2E Tests
-        run: npm test -- -c jest-integration-config.ts
+      - name: Run Tests
+        run: npm run test:coveralls
         env:
           JWT_SECRET: t8731hda=19kj
           MONGO_URL: "mongodb://docker:docker@localhost:27017/clean-node-api"
-
-      - name: Run Coveralls
-        run: npm run test:ci
