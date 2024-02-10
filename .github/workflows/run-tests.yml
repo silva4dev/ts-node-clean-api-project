@@ -35,7 +35,10 @@ jobs:
         run: npm install
 
       - name: Run Tests
-        run: npm run test:coveralls
+        run: npm run test:ci
         env:
           JWT_SECRET: t8731hda=19kj
           MONGO_URL: "mongodb://docker:docker@localhost:27017/clean-node-api"
+      
+      - name: Run Coveralls
+        uses: coverallsapp/github-action@v2
