@@ -16,6 +16,6 @@
     "@typescript-eslint/no-floating-promises": "off"
   },
   "parserOptions": {
-    "project": "./tsconfig.eslint.json"
+    "project": "./tsconfig.json"
   }
 }

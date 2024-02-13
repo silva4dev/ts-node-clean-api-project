@@ -1,7 +1,7 @@
 import env from '../config/env'
 import request from 'supertest'
-import app from '../config/app'
-import { MongoHelper } from '../../infra/db/mongodb/helpers/mongo-helper'
+import app from '@/main/config/app'
+import { MongoHelper } from '@/infra/db/mongodb/helpers/mongo-helper'
 import { Collection } from 'mongodb'
 import { sign } from 'jsonwebtoken'
 

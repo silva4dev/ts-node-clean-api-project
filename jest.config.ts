@@ -14,6 +14,9 @@ const config: Config = {
   watchPathIgnorePatterns: ['globalConfig'],
   transform: {
     '.+\\.ts$': 'ts-jest'
+  },
+  moduleNameMapper: {
+    '@/(.*)': '<rootDir>/src/$1'
   }
 }
 
